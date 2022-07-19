@@ -7,7 +7,7 @@ double[,] CreateMatr(int m, int n)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().NextDouble()*100;
+            matrix[i, j] = new Random().NextDouble()*10;
         }
     }
     return matrix;
@@ -24,6 +24,8 @@ void PrintMatr(double[,] matrix)
         Console.WriteLine();
     }
 }
+Console.Write("Введите количество строк в массиве: ");
 int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов в массиве: ");
 int n = Convert.ToInt32(Console.ReadLine());
 PrintMatr(CreateMatr(m, n));
